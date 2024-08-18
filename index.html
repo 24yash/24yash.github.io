@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Singhal - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Yash Singhal</h1>
+                <p>Passionate Developer & ML Enthusiast</p>
+                <a href="YashSinghal.pdf" download class="cta-button">Download Resume</a>
+            </div>
+        </section>
+
+        <section id="projects" class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>QuickML: Automated Machine Learning Platform</h3>
+                <p>A user-friendly web app that simplifies machine learning workflows using scikit-learn, enabling easy data preprocessing, model selection, and training.</p>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com/24yash/QuickML" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Show Time: Movie Ticket Booking Web Application</h3>
+                <p>A full-stack web app built with Flask and Vue.js, featuring user authentication, admin privileges, and a sophisticated ticket booking system with integrated ratings.</p>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="https://github.com/24yash/ShowTime" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project">
+                <h3>Data-Driven Financial Analysis for a Vegetable Business</h3>
+                <p>Leveraged time-series analysis and regression modeling to optimize pricing strategies and operational efficiency for a local vegetable business, potentially increasing profits by ₹4,581.</p>
+                <div class="project-links">
+                    <a href="#" target="_blank">Presentation</a>
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills & Technologies</h2>
+            <div class="skills">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web Development</h3>
+                    <ul class="skill-list">
+                        <li>Flask</li>
+                        <li>Vue.js</li>
+                        <li>Node.js</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Data Science & ML</h3>
+                    <ul class="skill-list">
+                        <li>Machine Learning</li>
+                        <li>Data Analysis</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Scikit-learn</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Other Skills</h3>
+                    <ul class="skill-list">
+                        <li>Algorithms</li>
+                        <li>Data Structures</li>
+                        <li>Object-Oriented Design</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section id="contact" class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:yash.singhal.tech@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/yashs24" target="_blank">LinkedIn</a>
+                <a href="https://github.com/24yash" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/Yashcodes" target="_blank">LeetCode</a>
+                <a href="https://kaggle.com/yashskaggle" target="_blank">Kaggle</a>
+            </div>
+        </section> -->
+    </main>
+
+    <footer>
+        <section id="contact" class="container">
+            <h2>Let's Connect</h2>
+            <div class="contact-links">
+                <a href="mailto:yash.singhal.tech@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/yashs24" target="_blank">LinkedIn</a>
+                <a href="https://github.com/24yash" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/Yashcodes" target="_blank">LeetCode</a>
+                <a href="https://kaggle.com/yashskaggle" target="_blank">Kaggle</a>
+            </div>
+        </section>
+        <!-- <p>&copy; 2024 Yash Singhal. All rights reserved.</p> -->
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a class to header when scrolling
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
