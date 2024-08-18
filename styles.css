@@ -2,6 +2,7 @@
     --bg-color: #121212;
     --text-color: #e0e0e0;
     --accent-color: #64ffda;
+    /* --accent-color: #1E90FF; */
     --secondary-color: #1c1c1c;
     --tertiary-color: #2c2c2c;
 }
@@ -219,5 +220,41 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+    }
+}
+
+.about-me {
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.about-me h2 {
+    margin-top: 0;
+}
+
+.about-me p {
+    margin-bottom: 20px;
+}
+
+.education-experience {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.education, .experience {
+    flex-basis: calc(50% - 15px);
+    background-color: var(--tertiary-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .education, .experience {
+        flex-basis: 100%;
     }
 }
