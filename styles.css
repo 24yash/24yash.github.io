@@ -4,7 +4,9 @@
     --accent-color: #64ffda;
     /* --accent-color: #1E90FF; */
     --secondary-color: #1c1c1c;
-    --tertiary-color: #2c2c2c;
+     --tertiary-color: #2c2c2c;
+    /* --secondary-color: #181818;
+    --tertiary-color: #1e1e1e; */
 }
 
 * {
@@ -28,7 +30,8 @@ body {
 }
 
 header {
-    background-color: rgba(28, 28, 28, 0.8);
+    background-color: rgba(24, 24, 24, 0.8);
+    /* background-color: rgba(28, 28, 28, 0.8); */
     backdrop-filter: blur(10px);
     padding: 16px 0;
     position: fixed;
@@ -147,8 +150,8 @@ h1, h2 {
 .project {
     background-color: var(--secondary-color);
     border-radius: 8px;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 40px;
+    margin-bottom: 40px;
     transition: transform 0.3s ease;
 }
 
@@ -176,6 +179,7 @@ h1, h2 {
     justify-content: center;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
