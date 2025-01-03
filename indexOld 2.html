@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2SZ82VHQB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T2SZ82VHQB');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yash Singhal</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://kit.fontawesome.com/bc8fed6840.js" crossorigin="anonymous"></script>
-  </head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
 <body>
-    <div id="particles-js"></div>
     <header>
         <nav>
             <ul>
@@ -37,7 +25,7 @@
             <div class="hero-content">
                 <h1>Yash Singhal</h1>
                 <p>Passionate Developer & ML Enthusiast</p>
-                <a href="Yash.pdf" download class="cta-button">Download Resume</a>
+                <a href="YashSinghal.pdf" download class="cta-button">Download Resume</a>
             </div>
         </section>
 
@@ -75,16 +63,7 @@
         <section id="projects" class="container">
             <h2>Projects</h2>
             <div class="project">
-              <h3>Chatbot with Persistent Memory</h3>
-              <img src="Chatbot.png" alt="Project Thumbnail" class="project-thumbnail">
-              <p>A chatbot powered by a Large Language Model (LLM) that features persistent memory. The chatbot is capable of remembering information across sessions, which allows it to provide more contextually accurate and detailed responses over time.</p>
-              <div class="project-links">
-                  <a href="https://github.com/24yash/Chatbot-with-Persistent-Memory" target="_blank">GitHub</a>
-              </div>
-            </div>
-            <div class="project">
                 <h3>QuickML: Automated Machine Learning Platform</h3>
-                <img src="QuickML.png" alt="Project Thumbnail" class="project-thumbnail">
                 <p>A user-friendly web app that simplifies machine learning workflows using scikit-learn, enabling easy data preprocessing, model selection, and training.</p>
                 <div class="project-links">
                     <a href="https://drive.google.com/file/d/1urQgPydgii7YkWP0Z0Vy8_cyDIE1dRjq/view?usp=sharing" target="_blank">Demo</a>
@@ -93,7 +72,6 @@
             </div>
             <div class="project">
                 <h3>Show Time: Movie Ticket Booking Web Application</h3>
-                <img src="showtime.png" alt="Project Thumbnail" class="project-thumbnail">
                 <p>A full-stack web app built with Flask and Vue.js, featuring user authentication, admin privileges, and a sophisticated ticket booking system with integrated ratings.</p>
                 <div class="project-links">
                     <a href="http://showtime.pythonanywhere.com/" target="_blank">Demo</a>
@@ -109,8 +87,15 @@
                 </div>
             </div>
             <div class="project">
+                <h3>Chatbot with Persistent Memory</h3>
+                <p>A chatbot powered by a Large Language Model (LLM) that features persistent memory. The chatbot is capable of remembering information across sessions, which allows it to provide more contextually accurate and detailed responses over time.</p>
+                <div class="project-links">
+                    <a href="https://github.com/24yash/Chatbot-with-Persistent-Memory" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="project">
                 <h3>Course Compass: Multi-Platform Course Search Engine</h3>
-                <p>Course Compass is a Flask-based web application that leverages machine learning models for efficient course searching from multiple educational platforms including Udemy, Coursera, NPTEL, and MIT OpenCourseWare. It also features a personalized course review feature using Generative AI to generate unique course descriptions based on user's search keywords.</p>
+                <p>Course Compass is a Flask-based web application that leverages machine learning models for efficient course searching from multiple educational platforms including Udemy, Coursera, NPTEL, and MIT OpenCourseWare. It also features a personalized course review feature using Google's Generative AI model, Gemini, to generate unique course descriptions based on user's search keywords.</p>
                 <div class="project-links">
                     <a href="https://github.com/24yash/Course-Compass" target="_blank">GitHub</a>
                 </div>
@@ -131,45 +116,45 @@
             </div>
         </section>
 
-                <section id="skills" class="container">
+        <section id="skills" class="container">
             <h2>Skills & Technologies</h2>
             <div class="skills">
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <ul class="skill-list">
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fas fa-code"></i> C++</li>
-                        <li><i class="fab fa-js"></i> JavaScript</li>
-                        <li><i class="fas fa-database"></i> SQL</li>
-                        <li><i class="fab fa-java"></i> Java</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>Java</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Web Development</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-flask"></i> Flask</li>
-                        <li><i class="fab fa-vuejs"></i> Vue.js</li>
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fab fa-html5"></i> HTML/CSS</li>
+                        <li>Flask</li>
+                        <li>Vue.js</li>
+                        <li>Node.js</li>
+                        <li>HTML/CSS</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Data Science & ML</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-robot"></i> Machine Learning</li>
-                        <li><i class="fas fa-chart-line"></i> Data Analysis</li>
-                        <li><i class="fas fa-table"></i> Pandas</li>
-                        <li><i class="fas fa-square-root-alt"></i> NumPy</li>
-                        <li><i class="fas fa-brain"></i> Scikit-learn</li>
+                        <li>Machine Learning</li>
+                        <li>Data Analysis</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Scikit-learn</li>
                     </ul>
                 </div>
                 <div class="skill-category">
                     <h3>Other Skills</h3>
                     <ul class="skill-list">
-                        <li><i class="fas fa-cogs"></i> Algorithms</li>
-                        <li><i class="fas fa-sitemap"></i> Data Structures</li>
-                        <li><i class="fas fa-object-group"></i> Object-Oriented Design</li>
-                        <li><i class="fab fa-git-alt"></i> Git</li>
+                        <li>Algorithms</li>
+                        <li>Data Structures</li>
+                        <li>Object-Oriented Design</li>
+                        <li>Git</li>
                     </ul>
                 </div>
             </div>
@@ -191,15 +176,66 @@
         <section id="contact" class="container">
             <h2>Let's Connect</h2>
             <div class="contact-links">
-              <a href="mailto:yash.singhal.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://linkedin.com/in/yashs24" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              <a href="https://github.com/24yash" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://leetcode.com/Yashcodes" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
-              <a href="https://kaggle.com/yashskaggle" target="_blank"><i class="fab fa-kaggle"></i> Kaggle</a>
+                <a href="mailto:yash.singhal.tech@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/yashs24" target="_blank">LinkedIn</a>
+                <a href="https://github.com/24yash" target="_blank">GitHub</a>
+                <a href="https://leetcode.com/Yashcodes" target="_blank">LeetCode</a>
+                <a href="https://kaggle.com/yashskaggle" target="_blank">Kaggle</a>
             </div>
         </section>
         <!-- <p>&copy; 2024 Yash Singhal. All rights reserved.</p> -->
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add a class to header when scrolling
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+    </script>
+    <script>
+        // Basic Three.js setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+    
+        // Add geometry (like a sphere) to the scene
+        const geometry = new THREE.SphereGeometry(50, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: 0x0077ff, wireframe: true });
+        const sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+    
+        // Set camera position
+        camera.position.z = 200;
+    
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+            sphere.rotation.x += 0.01;
+            sphere.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate();
+    
+        // Handle window resizing
+        window.addEventListener('resize', () => {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+    
 </body>
 </html>

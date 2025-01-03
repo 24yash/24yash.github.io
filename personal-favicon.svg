@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#4299E1"/>
+  
+  <!-- Y letter -->
+  <path d="M11 8L16 14.5L21 8H23L17 16V24H15V16L9 8H11Z" fill="white"/>
+</svg>

@@ -1,205 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T2SZ82VHQB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T2SZ82VHQB');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Singhal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://kit.fontawesome.com/bc8fed6840.js" crossorigin="anonymous"></script>
-  </head>
+    <title>Yash Singhal - Developer & Data Scientist</title>
+    <link rel="icon" type="image/svg+xml" href="personal-favicon.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2D3748;
+            --secondary: #4A5568;
+            --accent: #4299E1;
+            --background: #F7FAFC;
+            --text: #1A202C;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--background);
+            color: var(--text);
+        }
+        
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s ease-in-out;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .project-card {
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-tag {
+            background-color: rgba(66, 153, 225, 0.1);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: var(--accent);
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+    </style>
+</head>
 <body>
-    <div id="particles-js"></div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Yash Singhal</h1>
-                <p>Passionate Developer & ML Enthusiast</p>
-                <a href="YashResume.pdf" download class="cta-button">Download Resume</a>
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-800">Yash Singhal</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-600 hover:text-gray-900">About</a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-gray-900">Experience</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-gray-900">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-gray-900">Skills</a>
+                </div>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="about" class="container">
-            <div class="about-me">
-                <h2>About Me</h2>
-                <p>
-                    Hello! I'm Yash Singhal, a passionate technologist and aspiring developer based in Delhi, India. I'm currently pursuing a dual degree: a B.Tech in Information Technology at Maharaja Agrasen Institute of Technology and a B.S. in Data Science and Applications at the Indian Institute of Technology Madras.
-                </p>
-                <p>
-                    I'm deeply enthusiastic about building and designing with code. My experience spans web development, app creation, and tackling complex problems. I'm proficient in various programming languages and tools, with a particular interest in data science and machine learning.
-                </p>
-                <p>
-                    What drives me is the endless potential of technology to improve our lives. I'm constantly learning and exploring new areas in tech, always eager to push the boundaries of what's possible.
-                </p>
-                <div class="education-experience">
-                    <div class="education">
-                        <h3>Education</h3>
-                        <ul>
-                            <li>B.Tech in Information Technology, Maharaja Agrasen Institute of Technology (2021-2025)</li>
-                            <li>B.S. in Data Science and Applications, Indian Institute of Technology Madras (2021-2025)</li>
-                        </ul>
-                    </div>
-                    <div class="experience">
-                        <h3>Experience</h3>
-                        <ul>
-                            <li>Data Analytics Intern at Punjab National Bank (Jul 2024 - Aug 2024)</li>
-                            <li>AppDev Project Mentor at IIT Madras BS in Data Science Programme (Oct 2023 - Aug 2024)</li>
-                        </ul>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="relative bg-gray-50 py-16 md:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:items-center md:justify-between">
+                    <div class="md:w-1/2">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                            Hi, I'm Yash Singhal
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8">
+                            A passionate developer and data scientist, building solutions that make a difference.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="mailto:yash2492003@gmail.com" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                                Get in touch
+                            </a>
+                            <a href="Yash.pdf" download class="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors">
+                                <i class="fas fa-download mr-2"></i>Resume
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <div class="project">
-              <h3>Chatbot with Persistent Memory</h3>
-              <img src="Chatbot.png" alt="Project Thumbnail" class="project-thumbnail">
-              <p>A chatbot powered by a Large Language Model (LLM) that features persistent memory. The chatbot is capable of remembering information across sessions, which allows it to provide more contextually accurate and detailed responses over time.</p>
-              <div class="project-links">
-                  <a href="https://github.com/24yash/Chatbot-with-Persistent-Memory" target="_blank">GitHub</a>
-              </div>
-            </div>
-            <div class="project">
-                <h3>QuickML: Automated Machine Learning Platform</h3>
-                <img src="QuickML.png" alt="Project Thumbnail" class="project-thumbnail">
-                <p>A user-friendly web app that simplifies machine learning workflows using scikit-learn, enabling easy data preprocessing, model selection, and training.</p>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1urQgPydgii7YkWP0Z0Vy8_cyDIE1dRjq/view?usp=sharing" target="_blank">Demo</a>
-                    <a href="https://github.com/24yash/QuickML" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Show Time: Movie Ticket Booking Web Application</h3>
-                <img src="showtime.png" alt="Project Thumbnail" class="project-thumbnail">
-                <p>A full-stack web app built with Flask and Vue.js, featuring user authentication, admin privileges, and a sophisticated ticket booking system with integrated ratings.</p>
-                <div class="project-links">
-                    <a href="http://showtime.pythonanywhere.com/" target="_blank">Demo</a>
-                    <a href="https://github.com/24yash/ShowTime" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Data-Driven Financial Analysis for a Vegetable Business</h3>
-                <p>Leveraged time-series analysis and regression modeling to optimize pricing strategies and operational efficiency for a local vegetable business, potentially increasing profits by ₹4,581.</p>
-                <div class="project-links">
-                    <a href="https://docs.google.com/presentation/d/11rCs89prt2sew3DhlroaURd46Z3AJl78kNHVaDh_qeI/edit?usp=sharing" target="_blank">Presentation</a>
-                    <a href="https://github.com/24yash/BDM" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Course Compass: Multi-Platform Course Search Engine</h3>
-                <p>Course Compass is a Flask-based web application that leverages machine learning models for efficient course searching from multiple educational platforms including Udemy, Coursera, NPTEL, and MIT OpenCourseWare. It also features a personalized course review feature using Generative AI to generate unique course descriptions based on user's search keywords.</p>
-                <div class="project-links">
-                    <a href="https://github.com/24yash/Course-Compass" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Share-Canvas: Canvas Drawing and Sharing App</h3>
-                <p>This application allows users to draw on a canvas, share their drawing with others, and save their progress. Other users can then continue working on the same canvas and save their progress as well.</p>
-                <div class="project-links">
-                    <a href="https://github.com/24yash/Share-Canvas" target="_blank">GitHub</a>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Blog-Lite: Lightweight Blogging Platform</h3>
-                <p>Blog-Lite is a lightweight blogging platform built with Flask and SQLAlchemy. It allows users to create, edit, and delete blog posts, and provides a RESTful API for managing blog content.</p>
-                <div class="project-links">
-                    <a href="https://github.com/24yash/Blog-Lite" target="_blank">GitHub</a>
+        <!-- About Section -->
+        <section id="about" class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <p class="text-gray-600 mb-4">
+                            I'm a student pursuing B.Tech in Information Technology at Maharaja Agrasen Institute of Technology
+                            and B.S. in Data Science at IIT Madras, combining technical expertise with practical experience in
+                            software development and data science.
+                        </p>
+                        <p class="text-gray-600 mb-4">
+                            With a strong academic background (CGPA: 8.84 in B.Tech and 8.7 in B.S.), I'm passionate about
+                            solving complex problems and creating impactful solutions using technology.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gray-900">B.Tech in Information Technology and Engineering</h3>
+                            <p class="text-gray-600">Maharaja Agrasen Institute of Technology</p>
+                            <p class="text-gray-600">2021-2025</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-gray-900">B.S. in Data Science and Applications</h3>
+                            <p class="text-gray-600">Indian Institute of Technology Madras</p>
+                            <p class="text-gray-600">2021-2025</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-                <section id="skills" class="container">
-            <h2>Skills & Technologies</h2>
-            <div class="skills">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <ul class="skill-list">
-                        <li><i class="fab fa-python"></i> Python</li>
-                        <li><i class="fas fa-code"></i> C++</li>
-                        <li><i class="fab fa-js"></i> JavaScript</li>
-                        <li><i class="fas fa-database"></i> SQL</li>
-                        <li><i class="fab fa-java"></i> Java</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-flask"></i> Flask</li>
-                        <li><i class="fab fa-vuejs"></i> Vue.js</li>
-                        <li><i class="fab fa-node-js"></i> Node.js</li>
-                        <li><i class="fab fa-html5"></i> HTML/CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Science & ML</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-robot"></i> Machine Learning</li>
-                        <li><i class="fas fa-chart-line"></i> Data Analysis</li>
-                        <li><i class="fas fa-table"></i> Pandas</li>
-                        <li><i class="fas fa-square-root-alt"></i> NumPy</li>
-                        <li><i class="fas fa-brain"></i> Scikit-learn</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Other Skills</h3>
-                    <ul class="skill-list">
-                        <li><i class="fas fa-cogs"></i> Algorithms</li>
-                        <li><i class="fas fa-sitemap"></i> Data Structures</li>
-                        <li><i class="fas fa-object-group"></i> Object-Oriented Design</li>
-                        <li><i class="fab fa-git-alt"></i> Git</li>
-                    </ul>
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 bg-gray-50">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Experience</h2>
+                <div class="space-y-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Analytics Intern</h3>
+                        <p class="text-gray-600 mb-2">Punjab National Bank, MISD Department | July 2024 – Aug 2024</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Developed an intelligent Car Loan Application system using LLMs</li>
+                            <li>Automated user information gathering and API integration</li>
+                            <li>Implemented Docker containerization for scalable deployment</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Application Development Project Mentor</h3>
+                        <p class="text-gray-600 mb-2">Indian Institute of Technology Madras | Oct 2023 – June 2024</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                            <li>Conducted intensive bootcamps on web application development</li>
+                            <li>Mentored students through complex project development</li>
+                            <li>Achieved 85% excellent grade rate among mentees</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section id="contact" class="container">
-            <h2>Let's Connect</h2>
-            <div class="contact-links">
-                <a href="mailto:yash.singhal.tech@gmail.com">Email</a>
-                <a href="https://linkedin.com/in/yashs24" target="_blank">LinkedIn</a>
-                <a href="https://github.com/24yash" target="_blank">GitHub</a>
-                <a href="https://leetcode.com/Yashcodes" target="_blank">LeetCode</a>
-                <a href="https://kaggle.com/yashskaggle" target="_blank">Kaggle</a>
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Projects</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Management System</h3>
+                        <p class="text-gray-600 mb-4">
+                            A comprehensive system for instructors to assign and track student projects,
+                            featuring AI-powered analysis and automated evaluations.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">Gemini API</span>
+                        </div>
+                        <div class="space-x-4">
+                            <a href="https://drive.google.com/file/d/1seXWEJc58g-iB5XR8ATexTg6rgPVdfjY/view?usp=sharing" class="text-blue-500 hover:text-blue-600">Demo</a>
+                            <a href="https://github.com/24yash/soft-engg-project-sep-2024-se-sep-23" class="text-blue-500 hover:text-blue-600">GitHub →</a>
+                        </div>
+                    </div>
+        
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">CrimeCast</h3>
+                        <p class="text-gray-600 mb-4">
+                            Machine learning project for predicting crime categories using real-world data,
+                            featuring comprehensive EDA and multiple ML models.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Scikit-Learn</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">LightGBM</span>
+                        </div>
+                        <a href="https://www.kaggle.com/code/yash21f3002767/21f3002767-notebook-t22024?scriptVersionId=191543847" class="text-blue-500 hover:text-blue-600">View on Kaggle →</a>
+                    </div>
+        
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Show Time</h3>
+                        <p class="text-gray-600 mb-4">
+                            Theatre management system with CRUD operations, featuring admin privileges, 
+                            user authentication, and secure ticket booking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">Vue.js</span>
+                            <span class="skill-tag">Celery</span>
+                            <span class="skill-tag">Redis</span>
+                        </div>
+                        <div class="space-x-4">
+                            <a href="http://showtime.pythonanywhere.com/" class="text-blue-500 hover:text-blue-600">Demo</a>
+                            <a href="https://github.com/24yash/Show-Time" class="text-blue-500 hover:text-blue-600">GitHub →</a>
+                        </div>
+                    </div>
+        
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chatbot with Persistent Memory</h3>
+                        <p class="text-gray-600 mb-4">
+                            LLM-powered chatbot featuring persistent memory across sessions for contextually 
+                            accurate responses over time.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">LLM</span>
+                            <span class="skill-tag">NLP</span>
+                        </div>
+                        <a href="https://github.com/24yash/Chatbot-with-Persistent-Memory" class="text-blue-500 hover:text-blue-600">View on GitHub →</a>
+                    </div>
+        
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">QuickML</h3>
+                        <p class="text-gray-600 mb-4">
+                            User-friendly web app that simplifies machine learning workflows using scikit-learn, 
+                            enabling easy data preprocessing and model selection.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Scikit-learn</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Web App</span>
+                        </div>
+                        <div class="space-x-4">
+                            <a href="https://drive.google.com/file/d/1urQgPydgii7YkWP0Z0Vy8_cyDIE1dRjq/view?usp=sharing" class="text-blue-500 hover:text-blue-600">Demo</a>
+                            <a href="https://github.com/24yash/QuickML" class="text-blue-500 hover:text-blue-600">GitHub →</a>
+                        </div>
+                    </div>
+        
+                    <div class="project-card bg-gray-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Course Compass</h3>
+                        <p class="text-gray-600 mb-4">
+                            Flask-based course search engine using ML models to find courses across multiple platforms, 
+                            featuring AI-powered course descriptions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">ML</span>
+                            <span class="skill-tag">GenAI</span>
+                        </div>
+                        <a href="https://github.com/24yash/Course-Compass" class="text-blue-500 hover:text-blue-600">View on GitHub →</a>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
+
+                        <section id="skills" class="py-16 bg-gray-50">
+                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Skills</h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Programming Languages -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                    <i class="fas fa-code mr-2"></i>Programming Languages
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-python text-gray-600"></i>
+                                        <span class="text-gray-600">Python</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-code text-gray-600"></i>
+                                        <span class="text-gray-600">C++</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-js text-gray-600"></i>
+                                        <span class="text-gray-600">JavaScript</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-java text-gray-600"></i>
+                                        <span class="text-gray-600">Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Web Development -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                    <i class="fas fa-globe mr-2"></i>Web Development
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-python text-gray-600"></i>
+                                        <span class="text-gray-600">Flask</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-vuejs text-gray-600"></i>
+                                        <span class="text-gray-600">Vue.js</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-node-js text-gray-600"></i>
+                                        <span class="text-gray-600">Node.js</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fab fa-html5 text-gray-600"></i>
+                                        <span class="text-gray-600">HTML/CSS</span>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Data Science & ML -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                    <i class="fas fa-brain mr-2"></i>Data Science & ML
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-table text-gray-600"></i>
+                                        <span class="text-gray-600">Pandas</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-square-root-alt text-gray-600"></i>
+                                        <span class="text-gray-600">NumPy</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-robot text-gray-600"></i>
+                                        <span class="text-gray-600">Scikit-learn</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-chart-line text-gray-600"></i>
+                                        <span class="text-gray-600">Machine Learning</span>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Other Skills -->
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                                    <i class="fas fa-tools mr-2"></i>Other Skills
+                                </h3>
+                                <div class="space-y-2">
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-project-diagram text-gray-600"></i>
+                                        <span class="text-gray-600">Data Structures</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-code-branch text-gray-600"></i>
+                                        <span class="text-gray-600">Git</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-sitemap text-gray-600"></i>
+                                        <span class="text-gray-600">Object-Oriented Design</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <i class="fas fa-network-wired text-gray-600"></i>
+                                        <span class="text-gray-600">Algorithms</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
     </main>
 
-    <footer>
-        <section id="contact" class="container">
-            <h2>Let's Connect</h2>
-            <div class="contact-links">
-              <a href="mailto:yash.singhal.tech@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-              <a href="https://linkedin.com/in/yashs24" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-              <a href="https://github.com/24yash" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-              <a href="https://leetcode.com/Yashcodes" target="_blank"><i class="fas fa-code"></i> LeetCode</a>
-              <a href="https://kaggle.com/yashskaggle" target="_blank"><i class="fab fa-kaggle"></i> Kaggle</a>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>@ 2024 Yash Singhal.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/24yash" class="hover:text-blue-400">GitHub</a>
+                    <a href="https://linkedin.com/in/yashs24" class="hover:text-blue-400">LinkedIn</a>
+                    <a href="https://kaggle.com/yashskaggle" class="hover:text-blue-400">Kaggle</a>
+                </div>
             </div>
-        </section>
-        <!-- <p>&copy; 2024 Yash Singhal. All rights reserved.</p> -->
+        </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
