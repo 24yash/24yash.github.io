@@ -1,418 +1,364 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yash Singhal - Developer & Data Scientist</title>
-    <link rel="icon" type="image/svg+xml" href="personal-favicon.svg">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2D3748;
-            --secondary: #4A5568;
-            --accent: #4299E1;
-            --background: #F7FAFC;
-            --text: #1A202C;
-        }
-        
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--background);
-            color: var(--text);
-        }
-        
-        .nav-link {
-            position: relative;
-            text-decoration: none;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--accent);
-            transition: width 0.3s ease-in-out;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .project-card {
-            transition: transform 0.2s ease-in-out;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .skill-tag {
-            background-color: rgba(66, 153, 225, 0.1);
-            color: var(--accent);
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            display: inline-block;
-            margin: 0.25rem;
-        }
-        
-        .timeline-item {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 1px;
-            height: 100%;
-            background-color: var(--accent);
-        }
-        
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            left: -4px;
-            top: 0;
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            background-color: var(--accent);
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yash Singhal · Full-stack software engineer</title>
+<meta name="description" content="Yash Singhal, full-stack software engineer in Bengaluru. Vue and TypeScript up front, Java, Spring, Postgres and Kubernetes behind it. Open to new roles.">
+<meta name="theme-color" content="#0a0a0f" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f3efe6" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://24yash.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://24yash.github.io/">
+<meta property="og:title" content="Yash Singhal · I build the whole request path">
+<meta property="og:description" content="Full-stack software engineer. Vue, Java, Spring, Postgres, Kubernetes. Open to new roles.">
+<meta property="og:image" content="https://24yash.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://24yash.github.io/assets/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Yash Singhal","jobTitle":"Software Engineer","url":"https://24yash.github.io/","email":"mailto:yash2492003@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},"alumniOf":["Indian Institute of Technology Madras","Maharaja Agrasen Institute of Technology"],"sameAs":["https://github.com/24yash","https://linkedin.com/in/yashs24","https://leetcode.com/u/Yashscodes/"]}
+</script>
+<script>
+  document.documentElement.classList.remove('no-js');
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <nav class="fixed w-full bg-white shadow-sm z-50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="text-xl font-bold text-gray-800">Yash Singhal</div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link text-gray-600 hover:text-gray-900">About</a>
-                    <a href="#experience" class="nav-link text-gray-600 hover:text-gray-900">Experience</a>
-                    <a href="#projects" class="nav-link text-gray-600 hover:text-gray-900">Projects</a>
-                    <a href="#skills" class="nav-link text-gray-600 hover:text-gray-900">Skills</a>
-                </div>
-            </div>
+<div class="shell">
+
+  <aside class="rail">
+    <a class="me" href="#home"><span class="avatar">YS</span><span><b>Yash Singhal</b><span>Software engineer · BLR</span></span></a>
+    <div class="nav">
+      <a href="#home" data-v="home"><span class="ico">◎</span>Home<span class="kbd mono">1</span></a>
+      <a href="#map" data-v="map"><span class="ico">⌬</span>System map<span class="kbd mono">2</span></a>
+      <a href="#trace" data-v="trace"><span class="ico">≡</span>Career trace<span class="kbd mono">3</span></a>
+      <a href="#lab" data-v="lab"><span class="ico">⚗</span>Lab<span class="kbd mono">4</span></a>
+      <a href="#now" data-v="now"><span class="ico">◐</span>Now<span class="kbd mono">5</span></a>
+    </div>
+    <div class="navlbl">In a hurry</div>
+    <div class="nav">
+      <a href="#tldr" data-v="tldr"><span class="ico">⚡</span>30-second version<span class="kbd mono">6</span></a>
+      <a href="#contact" data-v="contact"><span class="ico">✉</span>Page Yash<span class="kbd mono">7</span></a>
+    </div>
+    <div class="rail-foot">
+      <div class="open-chip"><i></i><span><b>Open to new roles.</b> Full-stack, backend or platform. Anywhere in India, or remote.</span></div>
+      <div class="rail-tools">
+        <button class="tbtn" data-act="palette"><span class="mono">⌘K</span> Jump</button>
+        <button class="tbtn" data-act="theme" aria-label="Toggle colour theme">◐ Theme</button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="mtop">
+      <a class="me" href="#home" style="padding:0"><span class="avatar">YS</span><span><b>Yash Singhal</b><span>Software engineer · BLR</span></span></a>
+      <div style="display:flex;gap:6px"><button class="tbtn" style="width:40px" data-act="palette" aria-label="Search">⌕</button><button class="tbtn" style="width:40px" data-act="theme" aria-label="Toggle theme">◐</button></div>
+    </div>
+
+    <!-- HOME -->
+    <section class="view" id="v-home">
+      <div class="home-hero">
+        <span class="hello"><span class="wave">👋</span> Hey, I'm Yash. Open to new roles right now.</span>
+        <h1 class="big">I build the <span class="serif grad">whole</span><br>request path.</h1>
+        <p class="lede">From the <b>Vue screen</b> an operator clicks, through the <b>Java services</b> and <b>async workers</b> behind it, down to the <b>Postgres schema</b> and the <b>Kubernetes operator</b> that keeps it all running. Software engineer at Zeta, where banks in India and the US run on what we ship.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#map">Explore the system <span class="k mono">2</span></a>
+          <a class="btn" href="#tldr">30-second version</a>
+          <a class="btn" href="Yash_Singhal_CV.pdf">CV ↓</a>
         </div>
-    </nav>
+      </div>
+      <div class="card stats">
+        <div class="stat"><div class="v" data-count="250">250</div><div class="l">PRs merged in my first year</div></div>
+        <div class="stat"><div class="v" data-count="745" data-lc="all">745</div><div class="l">LeetCode problems, <span data-lc="hard">88</span> hard</div></div>
+        <div class="stat"><div class="v">0<small> failures</small></div><div class="l">across a 3,242-statement migration</div></div>
+        <div class="stat"><div class="v" data-count="4">4</div><div class="l">engineering awards at Zeta</div></div>
+      </div>
+      <div class="doors">
+        <a class="card door" href="#map">
+          <svg class="art" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <path d="M40 60 H120 M180 40 H250 M180 80 H250 M120 60 C150 60 150 40 180 40 M120 60 C150 60 150 80 180 80" stroke="var(--line-2)" fill="none" stroke-width="1.5"/>
+            <rect x="14" y="46" width="52" height="28" rx="7" fill="var(--a1-soft)" stroke="var(--a1)"/>
+            <rect x="94" y="46" width="52" height="28" rx="7" fill="var(--surface-2)" stroke="var(--line-2)"/>
+            <rect x="200" y="26" width="52" height="28" rx="7" fill="var(--surface-2)" stroke="var(--line-2)"/>
+            <rect x="200" y="66" width="52" height="28" rx="7" fill="var(--a2-soft)" stroke="var(--a2)"/>
+            <circle r="4" fill="var(--a2)"><animateMotion dur="2.4s" repeatCount="indefinite" path="M40 60 H120 C150 60 150 80 180 80 H250"/></circle>
+          </svg>
+          <span class="go">→</span>
+          <h3>System map</h3><p>My stack as an architecture diagram. Click any layer to see what I built there.</p>
+        </a>
+        <a class="card door" href="#trace">
+          <svg class="art" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect x="20" y="22" width="260" height="10" rx="4" fill="var(--a1)" opacity=".85"/>
+            <rect x="20" y="40" width="150" height="10" rx="4" fill="var(--a3)" opacity=".85"/>
+            <rect x="20" y="58" width="150" height="10" rx="4" fill="var(--a4)" opacity=".85"/>
+            <rect x="130" y="76" width="40" height="10" rx="4" fill="var(--a2)" opacity=".85"/>
+            <rect x="190" y="94" width="90" height="10" rx="4" fill="var(--a1)" opacity=".85"/>
+          </svg>
+          <span class="go">→</span>
+          <h3>Career trace</h3><p>2021 to now as a distributed trace. Yes, two degrees ran in parallel.</p>
+        </a>
+        <a class="card door" href="#lab">
+          <svg class="art" viewBox="0 0 300 110" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g font-family="Geist Mono" font-size="11" fill="var(--muted)">
+              <text x="22" y="34">POST /charge  → 201</text>
+              <text x="22" y="54">POST /charge  → 201</text>
+              <text x="22" y="74" fill="var(--a2)">POST /charge  → 201  ✗ dup</text>
+              <text x="22" y="94" fill="var(--a3)">idempotency-key ✓ → 200</text>
+            </g>
+          </svg>
+          <span class="go">→</span>
+          <h3>Lab</h3><p>Things I built on my own time. Try breaking an API with retries.</p>
+        </a>
+      </div>
+    </section>
 
-    <main class="pt-16">
-        <!-- Hero Section -->
-        <section class="relative bg-gray-50 py-16 md:py-24">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="md:flex md:items-center md:justify-between">
-                    <div class="md:w-1/2">
-                        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                            Hi, I'm Yash Singhal
-                        </h1>
-                        <p class="text-xl text-gray-600 mb-8">
-                            A passionate developer and data scientist, building solutions that make a difference.
-                        </p>
-                        <div class="flex space-x-4">
-                            <a href="mailto:yash2492003@gmail.com" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors">
-                                Get in touch
-                            </a>
-                            <a href="https://drive.google.com/file/d/1WrDFwumgnYQx5N0iI1ztN3_cOVoUYSTc/view?usp=sharing" download class="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-50 transition-colors">
-                                <i class="fas fa-download mr-2"></i>Resume
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <p class="text-gray-600 mb-4">
-                            I'm a student pursuing B.Tech in Information Technology at Maharaja Agrasen Institute of Technology
-                            and B.S. in Data Science at IIT Madras, combining technical expertise with practical experience in
-                            software development and data science.
-                        </p>
-                        <p class="text-gray-600 mb-4">
-                            With a strong academic background (CGPA: 8.84 in B.Tech and 8.7 in B.S.), I'm passionate about
-                            solving complex problems and creating impactful solutions using technology.
-                        </p>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="timeline-item">
-                            <h3 class="font-semibold text-gray-900">B.Tech in Information Technology and Engineering</h3>
-                            <p class="text-gray-600">Maharaja Agrasen Institute of Technology</p>
-                            <p class="text-gray-600">2021-2025</p>
-                        </div>
-                        <div class="timeline-item">
-                            <h3 class="font-semibold text-gray-900">B.S. in Data Science and Applications</h3>
-                            <p class="text-gray-600">Indian Institute of Technology Madras</p>
-                            <p class="text-gray-600">2021-2025</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="experience" class="py-16 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8">Experience</h2>
-                <div class="space-y-8">
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Analytics Intern</h3>
-                        <p class="text-gray-600 mb-2">Punjab National Bank, MISD Department | July 2024 – Aug 2024</p>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Developed an intelligent Car Loan Application system using LLMs</li>
-                            <li>Automated user information gathering and API integration</li>
-                            <li>Implemented Docker containerization for scalable deployment</li>
-                        </ul>
-                    </div>
-                    <div class="bg-white p-6 rounded-lg shadow-sm">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Application Development Project Mentor</h3>
-                        <p class="text-gray-600 mb-2">Indian Institute of Technology Madras | Oct 2023 – June 2024</p>
-                        <ul class="list-disc list-inside text-gray-600 space-y-2">
-                            <li>Conducted intensive bootcamps on web application development</li>
-                            <li>Mentored students through complex project development</li>
-                            <li>Achieved 85% excellent grade rate among mentees</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-16 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8">Projects</h2>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Project Management System</h3>
-                        <p class="text-gray-600 mb-4">
-                            A comprehensive system for instructors to assign and track student projects,
-                            featuring AI-powered analysis and automated evaluations.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">Vue.js</span>
-                            <span class="skill-tag">SQLite</span>
-                            <span class="skill-tag">Gemini API</span>
-                        </div>
-                        <div class="space-x-4">
-                            <a href="https://drive.google.com/file/d/1seXWEJc58g-iB5XR8ATexTg6rgPVdfjY/view?usp=sharing" class="text-blue-500 hover:text-blue-600">Demo</a>
-                            <a href="https://github.com/24yash/soft-engg-project-sep-2024-se-sep-23" class="text-blue-500 hover:text-blue-600">GitHub →</a>
-                        </div>
-                    </div>
-        
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">CrimeCast</h3>
-                        <p class="text-gray-600 mb-4">
-                            Machine learning project for predicting crime categories using real-world data,
-                            featuring comprehensive EDA and multiple ML models.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Scikit-Learn</span>
-                            <span class="skill-tag">Pandas</span>
-                            <span class="skill-tag">LightGBM</span>
-                        </div>
-                        <a href="https://www.kaggle.com/code/yash21f3002767/21f3002767-notebook-t22024?scriptVersionId=191543847" class="text-blue-500 hover:text-blue-600">View on Kaggle →</a>
-                    </div>
-        
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Show Time</h3>
-                        <p class="text-gray-600 mb-4">
-                            Theatre management system with CRUD operations, featuring admin privileges, 
-                            user authentication, and secure ticket booking.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">Vue.js</span>
-                            <span class="skill-tag">Celery</span>
-                            <span class="skill-tag">Redis</span>
-                        </div>
-                        <div class="space-x-4">
-                            <a href="http://showtime.pythonanywhere.com/" class="text-blue-500 hover:text-blue-600">Demo</a>
-                            <a href="https://github.com/24yash/Show-Time" class="text-blue-500 hover:text-blue-600">GitHub →</a>
-                        </div>
-                    </div>
-        
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chatbot with Persistent Memory</h3>
-                        <p class="text-gray-600 mb-4">
-                            LLM-powered chatbot featuring persistent memory across sessions for contextually 
-                            accurate responses over time.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">LLM</span>
-                            <span class="skill-tag">NLP</span>
-                        </div>
-                        <a href="https://github.com/24yash/Chatbot-with-Persistent-Memory" class="text-blue-500 hover:text-blue-600">View on GitHub →</a>
-                    </div>
-        
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">QuickML</h3>
-                        <p class="text-gray-600 mb-4">
-                            User-friendly web app that simplifies machine learning workflows using scikit-learn, 
-                            enabling easy data preprocessing and model selection.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Web App</span>
-                        </div>
-                        <div class="space-x-4">
-                            <a href="https://drive.google.com/file/d/1urQgPydgii7YkWP0Z0Vy8_cyDIE1dRjq/view?usp=sharing" class="text-blue-500 hover:text-blue-600">Demo</a>
-                            <a href="https://github.com/24yash/QuickML" class="text-blue-500 hover:text-blue-600">GitHub →</a>
-                        </div>
-                    </div>
-        
-                    <div class="project-card bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Course Compass</h3>
-                        <p class="text-gray-600 mb-4">
-                            Flask-based course search engine using ML models to find courses across multiple platforms, 
-                            featuring AI-powered course descriptions.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="skill-tag">Flask</span>
-                            <span class="skill-tag">ML</span>
-                            <span class="skill-tag">GenAI</span>
-                        </div>
-                        <a href="https://github.com/24yash/Course-Compass" class="text-blue-500 hover:text-blue-600">View on GitHub →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-                        <section id="skills" class="py-16 bg-gray-50">
-                    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-8">Skills</h2>
-                        <div class="grid md:grid-cols-2 gap-8">
-                            <!-- Programming Languages -->
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                    <i class="fas fa-code mr-2"></i>Programming Languages
-                                </h3>
-                                <div class="space-y-2">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-python text-gray-600"></i>
-                                        <span class="text-gray-600">Python</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-code text-gray-600"></i>
-                                        <span class="text-gray-600">C++</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-js text-gray-600"></i>
-                                        <span class="text-gray-600">JavaScript</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-java text-gray-600"></i>
-                                        <span class="text-gray-600">Java</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Web Development -->
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                    <i class="fas fa-globe mr-2"></i>Web Development
-                                </h3>
-                                <div class="space-y-2">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-python text-gray-600"></i>
-                                        <span class="text-gray-600">Flask</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-vuejs text-gray-600"></i>
-                                        <span class="text-gray-600">Vue.js</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-node-js text-gray-600"></i>
-                                        <span class="text-gray-600">Node.js</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fab fa-html5 text-gray-600"></i>
-                                        <span class="text-gray-600">HTML/CSS</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Data Science & ML -->
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                    <i class="fas fa-brain mr-2"></i>Data Science & ML
-                                </h3>
-                                <div class="space-y-2">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-table text-gray-600"></i>
-                                        <span class="text-gray-600">Pandas</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-square-root-alt text-gray-600"></i>
-                                        <span class="text-gray-600">NumPy</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-robot text-gray-600"></i>
-                                        <span class="text-gray-600">Scikit-learn</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-chart-line text-gray-600"></i>
-                                        <span class="text-gray-600">Machine Learning</span>
-                                    </div>
-                                </div>
-                            </div>
-                
-                            <!-- Other Skills -->
-                            <div class="bg-white p-6 rounded-lg shadow-sm">
-                                <h3 class="text-xl font-semibold text-gray-900 mb-4">
-                                    <i class="fas fa-tools mr-2"></i>Other Skills
-                                </h3>
-                                <div class="space-y-2">
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-project-diagram text-gray-600"></i>
-                                        <span class="text-gray-600">Data Structures</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-code-branch text-gray-600"></i>
-                                        <span class="text-gray-600">Git</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-sitemap text-gray-600"></i>
-                                        <span class="text-gray-600">Object-Oriented Design</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <i class="fas fa-network-wired text-gray-600"></i>
-                                        <span class="text-gray-600">Algorithms</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-    </main>
-
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p>@ 2024 Yash Singhal.</p>
-                </div>
-                <div class="flex space-x-6">
-                    <a href="https://github.com/24yash" class="hover:text-blue-400">GitHub</a>
-                    <a href="https://linkedin.com/in/yashs24" class="hover:text-blue-400">LinkedIn</a>
-                    <a href="https://kaggle.com/yashskaggle" class="hover:text-blue-400">Kaggle</a>
-                </div>
-            </div>
+    <!-- MAP -->
+    <section class="view" id="v-map">
+      <p class="eyebrow mono">02 · system map</p>
+      <h2 class="vh">Full stack, <span class="serif">literally.</span></h2>
+      <p class="vsub">This is the shape of the systems I work on, and every box is a layer I've shipped to production. Click one to open it, or send a request through and watch it travel.</p>
+      <div class="card map-wrap">
+        <div class="map-top">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <span class="path mono">yash.sys / architecture</span>
+          <span class="spacer"></span>
+          <button class="send" id="send"><span>▶</span> Send a request</button>
         </div>
-    </footer>
+        <svg class="map" id="map" viewBox="0 0 960 520" role="img" aria-label="Architecture diagram of the layers I work across">
+          <text class="lane" x="40" y="44">CLIENT</text>
+          <text class="lane" x="280" y="44">SERVICES</text>
+          <text class="lane" x="520" y="44">ASYNC + DATA</text>
+          <text class="lane" x="770" y="44">TOOLING</text>
+          <path class="edge" id="e1" d="M220 240 H280"/>
+          <path class="edge" id="e2" d="M460 228 C490 228 490 150 520 150"/>
+          <path class="edge" id="e3" d="M460 252 C490 252 490 340 520 340"/>
+          <path class="edge" id="e4" d="M610 192 V298"/>
+          <path class="edge dash" id="e5" d="M700 150 C735 150 735 228 770 228"/>
+          <path class="edge dash" id="e6" d="M700 340 C735 340 735 252 770 252"/>
+          <path class="edge dash" d="M130 285 V430 M370 285 V430 M610 382 V430"/>
+          <g class="plat"><rect x="40" y="430" width="880" height="62" rx="14"/></g>
+
+          <g class="node" data-n="client" tabindex="0" role="button" aria-label="Client layer">
+            <rect class="box" x="40" y="195" width="180" height="90" rx="14"/>
+            <text class="t" x="58" y="233">Frontend</text><text class="s" x="58" y="256">Vue · TS · React</text>
+          </g>
+          <g class="node" data-n="api" tabindex="0" role="button" aria-label="Services layer">
+            <rect class="box" x="280" y="195" width="180" height="90" rx="14"/>
+            <text class="t" x="298" y="233">APIs &amp; services</text><text class="s" x="298" y="256">Java · Spring · Nest</text>
+          </g>
+          <g class="node" data-n="async" tabindex="0" role="button" aria-label="Async layer">
+            <rect class="box" x="520" y="108" width="180" height="84" rx="14"/>
+            <text class="t" x="538" y="143">Async &amp; streams</text><text class="s" x="538" y="165">Flink · workflows</text>
+          </g>
+          <g class="node" data-n="data" tabindex="0" role="button" aria-label="Data layer">
+            <rect class="box" x="520" y="298" width="180" height="84" rx="14"/>
+            <text class="t" x="538" y="333">Data</text><text class="s" x="538" y="355">Postgres · Redis</text>
+          </g>
+          <g class="node" data-n="ai" tabindex="0" role="button" aria-label="AI and tooling">
+            <rect class="box" x="770" y="195" width="150" height="90" rx="14"/>
+            <text class="t" x="788" y="233">AI &amp; tools</text><text class="s" x="788" y="256">agents · CLIs</text>
+          </g>
+          <g class="node" data-n="platform" tabindex="0" role="button" aria-label="Platform layer">
+            <rect x="40" y="430" width="880" height="62" rx="14" fill="transparent"/>
+            <text class="t" x="62" y="467">Platform</text><text class="s" x="150" y="467">Kubernetes operators · Helm · CI/CD · release trains · AWS</text>
+          </g>
+          <g id="packets"></g>
+        </svg>
+        <div class="map-list">
+          <button data-n="client"><b>Frontend</b><span class="mono">Vue · TS · React</span></button>
+          <button data-n="api"><b>APIs &amp; services</b><span class="mono">Java · Spring · Nest</span></button>
+          <button data-n="async"><b>Async &amp; streams</b><span class="mono">Flink · workflows</span></button>
+          <button data-n="data"><b>Data</b><span class="mono">Postgres · Redis</span></button>
+          <button data-n="ai"><b>AI &amp; tools</b><span class="mono">agents · CLIs</span></button>
+          <button data-n="platform" class="plat-b"><b>Platform</b><span class="mono">Kubernetes · Helm · CI/CD</span></button>
+        </div>
+        <div class="map-log mono" id="maplog"><span>// click a box, or send a request</span></div>
+      </div>
+    </section>
+
+    <!-- TRACE -->
+    <section class="view" id="v-trace">
+      <p class="eyebrow mono">03 · career trace</p>
+      <h2 class="vh">Five years, <span class="serif">one trace.</span></h2>
+      <p class="vsub">My career as a distributed trace. Spans that overlap ran in parallel (I did two degrees at once and taught on the side). Click a span to inspect it.</p>
+      <div class="card trace">
+        <div class="tr-head"><div class="mono">span</div><div class="axis mono" id="axis"></div></div>
+        <div id="rows"></div>
+      </div>
+      <div class="card tr-detail" id="trdetail"></div>
+    </section>
+
+    <!-- LAB -->
+    <section class="view" id="v-lab">
+      <p class="eyebrow mono">04 · lab</p>
+      <h2 class="vh">Built because <span class="serif">I wanted them.</span></h2>
+      <p class="vsub">Side projects. Each one started as a problem I had.</p>
+      <div class="lab">
+        <div class="card exp feature">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span class="stamp oss mono">open source · Java 21</span>
+            <h3>IdemProbe</h3>
+            <p>A CLI that fires retries at your API, one by one and all at once, and catches the ones that charge twice. Try it: send 8 retries of the same payment and see what lands in the ledger.</p>
+            <div class="row"><a href="https://github.com/24yash/idemprobe">GitHub →</a></div>
+          </div>
+          <div class="retry">
+            <div class="ctl">
+              <div class="toggle" role="group" aria-label="API version">
+                <button id="naive" aria-pressed="true">naive API</button><button id="safe" aria-pressed="false">with idempotency key</button>
+              </div>
+              <button class="send" id="fire">⚡ Fire 8 retries</button>
+            </div>
+            <div class="lanes" id="lanes"></div>
+            <div class="ledger"><span class="mono">charges in ledger</span><b id="ledger">—</b></div>
+          </div>
+        </div>
+        <div class="card exp">
+          <span class="stamp live mono">live</span>
+          <h3>India SWE job radar</h3>
+          <p>A crawler that reads 700+ companies' own careers sites, filters roles by real pay data and puts them on one dashboard. I built it for my own job search, then made it public.</p>
+          <div class="row"><a href="https://24yash.github.io/india-swe-job-search/">Open dashboard →</a><a href="https://github.com/24yash/india-swe-job-search">Code</a></div>
+        </div>
+        <div class="card exp">
+          <span class="stamp oss mono">python · LLM</span>
+          <h3>A chatbot that remembers</h3>
+          <p>Long-term memory for an LLM: it decides what's worth keeping, saves it to a database and brings it back in later sessions.</p>
+          <div class="row"><a href="https://github.com/24yash/Chatbot-with-Persistent-Memory">GitHub →</a></div>
+        </div>
+        <div class="card exp">
+          <span class="stamp live mono">learning in public</span>
+          <h3>Engineering foundations book</h3>
+          <p>My searchable revision notes on systems, databases and DSA. I add to it as I learn.</p>
+          <div class="row"><a href="https://github.com/24yash/engineering-foundations-book">GitHub →</a></div>
+        </div>
+        <div class="card exp">
+          <span class="stamp soon mono">teaching</span>
+          <h3>IIT Madras bootcamps</h3>
+          <p>I ran full-stack bootcamps as a TA, and 85% of my students got top grades. My capstone repo has 35 stars from students using it.</p>
+          <div class="row"><a href="https://github.com/24yash/BDM">BDM repo →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW -->
+    <section class="view" id="v-now">
+      <p class="eyebrow mono">05 · now</p>
+      <h2 class="vh">What I'm <span class="serif">up to.</span></h2>
+      <p class="vsub">Updated November 2026. LeetCode numbers refresh daily<span data-lc-date></span>.</p>
+      <div class="now-grid">
+        <div class="card lc">
+          <h4 class="eyebrow mono" style="margin-bottom:16px">leetcode · Yashscodes</h4>
+          <div class="ring-row">
+            <div class="ring">
+              <svg width="150" height="150" viewBox="0 0 150 150" id="ring"></svg>
+              <div class="c"><b data-lc="all">745</b><span>solved</span></div>
+            </div>
+            <div class="legend">
+              <div><i style="background:var(--a3)"></i>Easy<b data-lc="easy">230</b></div>
+              <div><i style="background:var(--a4)"></i>Medium<b data-lc="medium">427</b></div>
+              <div><i style="background:var(--a2)"></i>Hard<b data-lc="hard">88</b></div>
+              <div style="color:var(--muted);font-size:13px" data-lc-streak>🔥 52 active days this year · best streak 10</div>
+            </div>
+          </div>
+        </div>
+        <div class="card nowlist">
+          <h4 class="eyebrow mono" style="margin-bottom:12px">this month</h4>
+          <ul>
+            <li><span class="mono">shipping</span>Database migrations that apply themselves safely in every environment.</li>
+            <li><span class="mono">practising</span>DSA in C++, every day. System design from first principles.</li>
+            <li><span class="mono">building</span>This site, and more sources for the job radar.</li>
+            <li><span class="mono">looking for</span>My next team: full-stack, backend or platform.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TLDR -->
+    <section class="view" id="v-tldr">
+      <p class="eyebrow mono">06 · 30-second version</p>
+      <div class="card tldr">
+        <div class="tldr-top">
+          <span class="avatar">YS</span>
+          <div><h2>Yash Singhal</h2><p>Full-stack software engineer · Bengaluru · open to anywhere in India or remote</p></div>
+          <div class="clock mono">time left<b id="clock">0:30</b></div>
+        </div>
+        <div class="tldr-grid">
+          <div>
+            <h4>At a glance</h4>
+            <dl class="kv" style="font-size:14.5px;gap:9px 18px">
+              <dt>Now</dt><dd>SDE I at Zeta (banking platform)</dd>
+              <dt>Experience</dt><dd>1.5+ years at Zeta and 3 internships</dd>
+              <dt>Wants</dt><dd>Full-stack, backend or platform roles</dd>
+              <dt>Education</dt><dd>IIT Madras (BS), GGSIPU (B.Tech)</dd>
+              <dt>Notice</dt><dd>Ask me</dd>
+            </dl>
+            <h4 style="margin-top:22px">Stack</h4>
+            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">TypeScript</span><span class="chip">Vue.js</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Kubernetes</span><span class="chip">AWS</span><span class="chip">Python</span></div>
+          </div>
+          <div>
+            <h4>Five things worth knowing</h4>
+            <ul class="wins">
+              <li>Built a <b>bulk-execution system end to end</b>: Vue upload flow, Java services, async fan-out across 7 processes.</li>
+              <li>Built <b>two Kubernetes operators</b> from scratch that replaced manual environment setup.</li>
+              <li>Owned the safety layer of a streaming migration: <b>461 tests, 3,242 statements, 0 failures</b>.</li>
+              <li>Debug production for <b>bank clients in India and the US</b>, end to end.</li>
+              <li><b>4 awards</b> at Zeta, <b data-lc="all">745</b> LeetCode problems, CodeVita global rank <b>103</b>.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tldr-foot">
+          <a class="btn primary" href="mailto:yash2492003@gmail.com?subject=Opportunity">Email Yash</a>
+          <a class="btn" href="Yash_Singhal_CV.pdf">CV ↓</a>
+          <a class="btn" href="https://linkedin.com/in/yashs24">LinkedIn</a>
+          <a class="btn" href="https://github.com/24yash">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="view" id="v-contact">
+      <p class="eyebrow mono">07 · page yash</p>
+      <h2 class="vh">On call for <span class="serif">your team.</span></h2>
+      <p class="vsub">I'm usually on call for banks. I'd much rather be on call for you. I usually reply within a day.</p>
+      <div class="card pager">
+        <div>
+          <button class="page-btn" id="pagebtn">Page Yash<small>opens your email · or press P anywhere</small></button>
+          <p class="mono" style="font-size:12.5px;color:var(--faint);margin:14px 0 0">yash2492003@gmail.com · <a href="#" id="copy" style="color:var(--a1)">copy</a></p>
+        </div>
+        <div class="links-list">
+          <a href="https://linkedin.com/in/yashs24">LinkedIn <span>/in/yashs24 ↗</span></a>
+          <a href="https://github.com/24yash">GitHub <span>@24yash ↗</span></a>
+          <a href="https://leetcode.com/u/Yashscodes/">LeetCode <span><span data-lc="all">745</span> solved ↗</span></a>
+          <a href="Yash_Singhal_CV.pdf">CV <span>PDF, 1 page ↓</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<nav class="tabbar" aria-label="Sections">
+  <a href="#home" data-v="home"><b>◎</b>Home</a>
+  <a href="#map" data-v="map"><b>⌬</b>Map</a>
+  <a href="#trace" data-v="trace"><b>≡</b>Trace</a>
+  <a href="#lab" data-v="lab"><b>⚗</b>Lab</a>
+  <a href="#tldr" data-v="tldr"><b>⚡</b>TL;DR</a>
+  <a href="#contact" data-v="contact"><b>✉</b>Page</a>
+</nav>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="d-head"><button class="d-close" id="dclose" aria-label="Close">✕</button><div class="layer mono" id="dlayer"></div><h2 id="dtitle"></h2><p id="dsub"></p></div>
+  <div class="d-body" id="dbody"></div>
+</aside>
+
+<div class="pal-scrim" id="pal"><div class="pal" role="dialog" aria-label="Jump to"><input id="palin" placeholder="Where to? Try 'map', 'cv' or 'email'" autocomplete="off"><ul id="pallist"></ul></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="assets/app.js" defer></script>
 </body>
 </html>
